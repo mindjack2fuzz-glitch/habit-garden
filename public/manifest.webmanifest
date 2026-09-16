@@ -2,13 +2,14 @@
   "name": "そだてぐらし",
   "short_name": "そだてぐらし",
   "description": "毎日の記録で庭を育てる、やさしい習慣化アプリ",
-  "start_url": "/",
+  "start_url": "/habit-garden/",
+  "scope": "/habit-garden/",
   "display": "standalone",
   "background_color": "#fdf6f0",
   "theme_color": "#fdf6f0",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/habit-garden/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
