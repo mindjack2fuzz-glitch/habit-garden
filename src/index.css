@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --font-rounded: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", sans-serif;
+
+  --color-cream: #fdf6f0;
+  --color-cream-dark: #f6ead9;
+  --color-leaf: #7fb069;
+  --color-leaf-light: #a8d5ba;
+  --color-leaf-dark: #5c8a4a;
+  --color-petal-pink: #f7b6c2;
+  --color-petal-yellow: #ffd76b;
+  --color-petal-purple: #d9a8f0;
+  --color-petal-red: #ff9aa2;
+  --color-clay: #6b5b4d;
+  --color-clay-soft: #a89a8c;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-rounded);
+  background: var(--color-cream);
+  color: var(--color-clay);
+}
+
+/* Long-press water button ripple */
+@keyframes water-ripple {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.water-ripple {
+  animation: water-ripple 0.7s ease-out forwards;
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-1.5deg);
+  }
+  50% {
+    transform: rotate(1.5deg);
+  }
+}
+
+.sway {
+  animation: sway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Full-bloom flourish */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.twinkle {
+  animation: twinkle 1.8s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spin-slow 14s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.15);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2.4s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
